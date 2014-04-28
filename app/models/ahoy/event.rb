@@ -1,6 +1,7 @@
 module Ahoy
-  class Event < ActiveRecord::Base
-    self.table_name = "ahoy_events"
+  class Event
+    include Mongoid::Document
+    include Mongoid::Timestamps
 
     belongs_to :visit
     belongs_to :user, polymorphic: true
