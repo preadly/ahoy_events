@@ -5,5 +5,7 @@ module Ahoy
 
     belongs_to :visit
     belongs_to :user, polymorphic: true
+
+    field :properties
   end
 end
